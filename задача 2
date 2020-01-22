@@ -1,0 +1,60 @@
+public static void main(String[] args) {
+		Scanner manqk=new Scanner(System.in);
+		 int n;
+		 System.out.println("Enter n=");
+		 do {
+			 n=manqk.nextInt();
+		 }while(n<0||n>300);
+		 double a[]=new double[n];
+		 for(int i=0;i<n;i++) {
+			 System.out.println("Enter a["+i+"]=");
+			 a[i]=manqk.nextDouble();
+		 }
+		 //2.1
+		 int br=0;
+		 for(int i=0;i<n;i++) {
+			 if(a[i]%3==0) {
+				 br++;
+			 }
+			 
+		 }
+		 System.out.println("The count of numbers that multiplies on 3 is:"+br);
+		 //2.2
+		 double sum=1;
+		 for(int i=0;i<n;i++) {
+			 if(a[i]>0) {
+				 sum=sum*a[i];
+			 }
+			 }System.out.println("multiplication is equal to "+sum);
+			 System.out.println("Check how many number are larger than x");
+			 System.out.println("Enter x=");
+				double x=manqk.nextDouble();
+				//2.3
+				int br1=0;
+				for(int i=0;i<n;i++) {
+					if(a[i]>x) {
+						br1++;
+					}
+				}
+				System.out.println("The number of numbers larger than "+x+" is "+br1);
+				//2.4 
+				double max = a[0];
+			       int index=0;
+
+			       for(int i = 0; i < n; i++)
+			       {
+			            if(max < a[i])
+			            {
+			                max = a[i];
+			                index=i;
+			            }
+			        }
+				 System.out.println("max="+max +" "+"index="+index);
+				//2.5
+				 double sum1=0;
+					for(int i=0;i<n;i++) {
+						sum1+=a[i];
+					}
+					System.out.println("The sum of all elemets is="+sum1);
+					
+				}
