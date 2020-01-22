@@ -5,10 +5,10 @@ public static void main(String[] args) {
 		 do {
 			 n=manqk.nextInt();
 		 }while(n<0||n>300);
-		 double a[]=new double[n];
+		 int a[]=new int[n];
 		 for(int i=0;i<n;i++) {
 			 System.out.println("Enter a["+i+"]=");
-			 a[i]=manqk.nextDouble();
+			 a[i]=manqk.nextInt();
 		 }
 		 //2.1
 		 int br=0;
