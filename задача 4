@@ -26,10 +26,10 @@ public static void main(String[] args) {
 		}
 		System.out.println("Averege score of the class is"+p);
 		//4.3
-		double x=5.5;
+		
 		int br=0;
 		for(int i=0;i<n;i++) {
-			if(a[i]>=x) {
+			if(a[i]>=5.5) {
 				br++;
 				System.out.println("Number "+i+" "+"will recive scholarship");
 			}
