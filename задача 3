@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
+
+
+public static void main(String[] args)throws Exception{
+		
+        Scanner manqk = new Scanner(System.in);
+        System.out.println("Enter the number of names");
+       //3.1
+        int n;
+        do {
+        	n=manqk.nextInt();
+        }while(n>100||n<0);
+        String[] a = new String[n];
+       for(int i=0;i<n;i++) {
+    	   System.out.println("Enter the chosen name/s");
+    	   a[i]=manqk.next();
+       }
+       List<String> list = Arrays.asList(a);
+       //3.2
+       System.out.println("Enter name to check if the name you are searching for is  there");
+       
+       String x=manqk.next();
+       if(list.contains(x)) {
+		   System.out.println("There is name called"+" "+x+" "+"in the array and his index is"+" "+list.indexOf(x));
+		   
+	   }
+    	   else {
+    		   System.out.println("Check if you did a mistake but there is no such as name as called"+" "+x+" "+"in the array");
+    	   }
+       //3.3
+       System.out.println();
+       System.out.println("Names that starts with 'I' are:");
+       String letter="I";
+       for(String i : a) {
+    	    if(i.startsWith(letter)) System.out.println(i);
+    	    
+    	      
+    	}
