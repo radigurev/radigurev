@@ -1,0 +1,59 @@
+public static void main(String[] args) {
+		Scanner manqk=new Scanner(System.in);
+		System.out.println("Enter n=");
+		int n;
+		do {
+			n=manqk.nextInt();
+		}while(n>100 || n<0);
+		double a[]=new double[n];
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter a["+i+"]=");
+			a[i]=manqk.nextDouble();
+		}
+		//1.1
+		double sum=1;
+		for(int i=0;i<n;i++) {
+			sum*=a[i];
+		}
+		System.out.println("Sum="+sum);
+		//1.2
+		int br=0;
+		 for(int i=0;i<n;i++) {
+		 if(a[i]>0) {
+			 br++;
+		 	}
+		 }System.out.println("Positive numbers count is:"+br);
+		 
+		 //1.3
+		 int sum1=0;
+		 for(int i=0;i<n;i++) {
+			 if(i%2==0) {
+				 sum1+=a[i];
+			 }
+		 }
+		 System.out.println("the sum of numbers in positive index is="+sum1);
+		 System.out.println("Enter x=");
+		 //1.4
+		 double x=manqk.nextDouble();
+		 int br1=0;
+		 for(int i=0;i<n;i++) {
+		 if(x==a[i]) {
+			 br1++;
+		 }
+		 }
+		 System.out.println("The number"+" "+x+" "+"is"+" "+br1+" "+"time/s in the array");
+		 //1.5
+		 double min = a[0];
+	       int index=0;
+
+	       for(int i = 0; i < n; i++)
+	       {
+	       if(min > a[i])
+	       {
+	    	   min = a[i];
+	    	   index=i;
+	            }
+	        }
+		 System.out.println("min="+min +" "+"index="+index);
+		 
+		 }
