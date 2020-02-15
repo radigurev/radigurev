@@ -1,0 +1,57 @@
+public class triangal {
+	double a;
+	double b;
+	public double lice(){
+		double s=a*b/2;
+		return s;
+	}
+	public boolean valid() {
+		
+		boolean x=true;
+		if(a<=0||b<=0) {
+			x=false;
+		}
+		return x;
+	}
+}
+
+///////////////////////////////////////////////////////////////
+
+public static void main(String[] args) {
+		Scanner manqk=new Scanner(System.in);
+		triangal tr1=new triangal();
+		triangal tr2=new triangal();
+     System.out.println("Enter a for triangle 1");
+     tr1.a=manqk.nextDouble();
+     System.out.println("Enter ha for triangle 1");
+     tr1.b=manqk.nextDouble();
+     if(tr1.valid()==false) {
+    	 System.out.println("Invalid triangle");
+     }
+     System.out.println("Enter a for triangle 2");
+     tr2.a=manqk.nextDouble();
+     System.out.println("Enter ha for triangle 2");
+     tr2.b=manqk.nextDouble();
+     if(tr2.valid()==false) {
+       	 System.out.println("Invalid triangle");
+        }
+     if(tr1.valid()==true && tr2.valid()==true) {
+    	 if(tr1.lice()>tr2.lice()) {
+    		 System.out.println("Triangle 1 is bigger than triangle 2");
+    		 System.out.println("Triangle 1="+tr1.lice()+"\t"+"triangle 2="+tr2.lice());
+    	 }
+    	 else if(tr1.lice()<tr2.lice()) {
+    		 System.out.println("Triangle 2 is bigger than triangle 1");
+    		 System.out.println("Triangle 1="+tr2.lice()+"\t"+"triangle 2="+tr1.lice());
+
+    	 }
+    	 else {
+    		 System.out.println("They are equal");
+    		 System.out.println("Triangle 1="+tr1.lice()+"\t"+"triangle 2="+tr2.lice());
+
+    	 }
+     }
+     else {
+    	 System.out.println("Invalid data");
+     }
+	}
