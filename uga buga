@@ -1,0 +1,194 @@
+zad 6
+
+public class torta {
+	String name;
+	double price;
+}
+
+////////////////////////
+public static void main(String[] args) {
+		Scanner manqk=new Scanner(System.in);
+		Scanner manqk1=new Scanner(System.in);
+		int n;
+		System.out.println("Enter number of cakes");
+		do{
+			n=manqk.nextInt();
+		}while(n<0);
+		torta a[]=new torta[n];
+		for(int i=0;i<n;i++) {
+			a[i]=new torta();
+		}
+		
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter name for number "+i);
+			a[i].name=manqk1.next();
+		}
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter price for number "+i);
+			a[i].price=manqk.nextDouble();
+		}
+		for(int i=0;i<n;i++) {
+			System.out.println("Cake "+a[i].name+" cost "+a[i].price);
+		}
+		
+		int index=0;
+		double price=a[0].price;
+		String name=a[0].name;
+	       for(int i=0;i<n;i++)
+	       {
+	            if(price<a[i].price)
+	            {
+	            	name=a[i].name;
+	                price=a[i].price;
+	                index=i;
+	            }
+	        
+		}
+		System.out.println("Most expencive cake is "+name+" witch cost "+price+" at "+index+" place");
+		System.out.println("Search for a cake");
+		String name2=manqk1.next();
+		double price2;
+		int index2;
+		for(int i=0;i<n;i++) {
+			if(a[i].name.contains(name2)) {
+				price2=a[i].price;
+				index2=i;
+				System.out.println("There is a cake with the name "+name2+" it cost "+price2+" and its on "+index2+" position");
+			}
+		}
+	}
+  
+  
+  
+  zad 7
+  public class rabotnici {
+String name;
+String addres;
+String work;
+double wage;
+}
+///////////////////////////////////
+public static void main(String[] args) {
+Scanner manqk=new Scanner(System.in);
+Scanner manqk1=new Scanner(System.in);
+Scanner manqk2=new Scanner(System.in);
+Scanner manqk3=new Scanner(System.in);
+System.out.println("Enter number of workers");
+int n;
+do {
+	n=manqk.nextInt();
+}while(n<0);
+rabotnici a[]=new rabotnici[n];
+for(int i=0;i<n;i++) {
+	a[i]=new rabotnici(); 
+}
+System.out.println("Enter the following data for the worker/s");
+	for(int i=0;i<n;i++) {
+		System.out.println("Name for number "+i);
+		a[i].name=manqk1.next();
+	}
+	for(int i=0;i<n;i++) {
+		System.out.println("addres for number "+i);
+		a[i].addres=manqk2.next();
+	}
+	for(int i=0;i<n;i++) {
+		System.out.println("position for number "+i);
+		a[i].work=manqk1.next();
+	}
+	for(int i=0;i<n;i++) {
+		System.out.println("salaray for number "+i);
+		a[i].wage=manqk1.nextDouble();
+	}
+	double max=a[0].wage;
+	String name=a[0].name;
+	int index = 0;
+	for(int i=0;i<n;i++) {
+		if(max<a[i].wage) {
+			index=i;
+			max=a[i].wage;
+			name=a[i].name;
+		}
+	}
+	System.out.println("The most paid worker is "+name+" with salaray of "+max+" with index "+index);
+	System.out.println("Search for worker in the position you are searching for");
+	String x=manqk3.next();
+	String name2;
+	int index2;
+	for(int i=0;i<n;i++) {
+		if(a[i].work.contains(x)) {
+			name2=a[i].name;
+			
+			System.out.println("Worker for that position is "+name2);
+		}
+	}
+	System.out.println("Check for a name");
+	String name3=manqk3.next();
+	int index3=0;
+	String addres;
+	String work;
+	double wage;
+	for(int i=0;i<n;i++) {
+		if(a[i].name.contains(name3)) {
+			name3=a[i].name;
+			work=a[i].work;
+			addres=a[i].addres;
+			index3=i;
+			wage=a[i].wage;
+			System.out.println("There is worker called "+name3+" with salaray of "+wage+". His addres is "+addres+" and his/her index is "+index);
+		}
+	}
+
+	}
+  
+  zad 8
+  public class koli {
+String model;
+int year;
+double price;
+}
+
+//////////////////////////////////////////////////////////////////
+
+
+
+public static void main(String[] args) {
+		Scanner manqk=new Scanner(System.in);
+		Scanner manqk1=new Scanner(System.in);
+		System.out.println("Enter number of cars");
+		int n;
+		do {
+			n=manqk.nextInt();
+		}while(n<0);
+		koli a[]=new koli[n];
+		for(int i=0;i<n;i++) {
+			a[i]=new koli();
+		}
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter the car brand");
+			a[i].model=manqk1.next();
+			System.out.println("Enter year of manufacture");
+			a[i].year=manqk.nextInt();
+			System.out.println("Enter the price of the car");
+			a[i].price=manqk.nextDouble();
+			System.out.print("");
+			System.out.println("Model "+a[i].model);
+			System.out.println("Year "+a[i].year);
+			System.out.println("Price "+a[i].price);
+			System.out.print("");
+
+		}
+		double min=a[0].price;
+		int year=a[0].year;
+		String name=a[0].model;
+		int index=0;
+		for(int i=0;i<n;i++) {
+			if(min>a[i].price) {
+				min=a[i].price;
+				name=a[i].model;
+				year=a[i].year;
+				index=i;
+			}
+		}
+		System.out.println("The cheapest car here is "+name+" that costs "+min+" year "+year+" and index "+index);
+		
+	}
