@@ -69,74 +69,74 @@ double wage;
 }
 ///////////////////////////////////
 public static void main(String[] args) {
-Scanner manqk=new Scanner(System.in);
-Scanner manqk1=new Scanner(System.in);
-Scanner manqk2=new Scanner(System.in);
-Scanner manqk3=new Scanner(System.in);
-System.out.println("Enter number of workers");
-int n;
-do {
-	n=manqk.nextInt();
-}while(n<0);
-rabotnici a[]=new rabotnici[n];
-for(int i=0;i<n;i++) {
-	a[i]=new rabotnici(); 
-}
-System.out.println("Enter the following data for the worker/s");
-	for(int i=0;i<n;i++) {
-		System.out.println("Name for number "+i);
-		a[i].name=manqk1.next();
-	}
-	for(int i=0;i<n;i++) {
-		System.out.println("addres for number "+i);
-		a[i].addres=manqk2.next();
-	}
-	for(int i=0;i<n;i++) {
-		System.out.println("position for number "+i);
-		a[i].work=manqk1.next();
-	}
-	for(int i=0;i<n;i++) {
-		System.out.println("salaray for number "+i);
-		a[i].wage=manqk1.nextDouble();
-	}
-	double max=a[0].wage;
-	String name=a[0].name;
-	int index = 0;
-	for(int i=0;i<n;i++) {
-		if(max<a[i].wage) {
-			index=i;
-			max=a[i].wage;
-			name=a[i].name;
+		Scanner manqk=new Scanner(System.in);
+		Scanner manqk1=new Scanner(System.in);
+		System.out.println("Enter number of workers");
+		int n;
+		do {
+			n=manqk.nextInt();
+		}while(n<0);
+		rabotnici a[]=new rabotnici[n];
+		for(int i=0;i<n;i++) {
+			a[i]=new rabotnici(); 
 		}
-	}
-	System.out.println("The most paid worker is "+name+" with salaray of "+max+" with index "+index);
-	System.out.println("Search for worker in the position you are searching for");
-	String x=manqk3.next();
-	String name2;
-	int index2;
-	for(int i=0;i<n;i++) {
-		if(a[i].work.contains(x)) {
-			name2=a[i].name;
-			
-			System.out.println("Worker for that position is "+name2);
-		}
-	}
-	System.out.println("Check for a name");
-	String name3=manqk3.next();
-	int index3=0;
-	String addres;
-	String work;
-	double wage;
-	for(int i=0;i<n;i++) {
-		if(a[i].name.contains(name3)) {
-			name3=a[i].name;
-			work=a[i].work;
-			addres=a[i].addres;
-			index3=i;
-			wage=a[i].wage;
-			System.out.println("There is worker called "+name3+" with salaray of "+wage+". His addres is "+addres+" and his/her index is "+index);
-		}
-	}
+		System.out.println("Enter the following data for the worker/s");
+			for(int i=0;i<n;i++) {
+				System.out.println("Name for number "+i);
+				a[i].name=manqk.next();
+			}
+			for(int i=0;i<n;i++) {
+				System.out.println("addres for number "+i);
+				a[i].addres=manqk.next();
+			}
+			for(int i=0;i<n;i++) {
+				System.out.println("position for number "+i);
+				a[i].work=manqk1.next();
+			}
+			for(int i=0;i<n;i++) {
+				System.out.println("salaray for number "+i);
+				a[i].wage=manqk1.nextDouble();
+			}
+			double max=a[0].wage;
+			String name=a[0].name;
+			int index = 0;
+			for(int i=0;i<n;i++) {
+				if(max<a[i].wage) {
+					index=i;
+					max=a[i].wage;
+					name=a[i].name;
+				}
+			}
+			System.out.println("The most paid worker is "+name+" with salaray of "+max+" with index "+index);
+			System.out.println("Search for worker in the position you are searching for");
+			String x=manqk.next();
+			String name2;
+			int index2;
+			for(int i=0;i<n;i++) {
+				if(a[i].work.contains(x)) {
+					name2=a[i].name;
+					
+					System.out.println("Worker for that position is "+name2);
+				}
+			}
+			System.out.println("Check for a name");
+			String name3=manqk.next();
+			int index3=0;
+			String addres;
+			String work;
+			double wage;
+			for(int i=0;i<n;i++) {
+				if(a[i].name.contains(name3)) {
+					name3=a[i].name;
+					work=a[i].work;
+					addres=a[i].addres;
+					index3=i;
+					wage=a[i].wage;
+					System.out.println("There is worker called "+name3+" with salaray of "+wage+". His addres is "+addres+" and his/her index is "+index);
+				}
+			}
+
+			}
 
 	}
   
