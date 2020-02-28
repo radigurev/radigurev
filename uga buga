@@ -55,6 +55,9 @@ public static void main(String[] args) {
 				index2=i;
 				System.out.println("There is a cake with the name "+name2+" it cost "+price2+" and its on "+index2+" position");
 			}
+			
+			manqk.close();
+			manqk1.close();
 		}
 	}
   
@@ -133,8 +136,10 @@ public static void main(String[] args) {
 					index3=i;
 					wage=a[i].wage;
 					System.out.println("There is worker called "+name3+" with salaray of "+wage+". His addres is "+addres+" and his/her index is "+index);
+					}
 				}
-			}
+		manqk.close();
+		manqk1.close();
 
 			}
 
@@ -190,5 +195,7 @@ public static void main(String[] args) {
 			}
 		}
 		System.out.println("The cheapest car here is "+name+" that costs "+min+" year "+year+" and index "+index);
+		manqk.close();
+			manqk1.close();
 		
 	}
